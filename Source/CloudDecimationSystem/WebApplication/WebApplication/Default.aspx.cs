@@ -16,7 +16,11 @@ namespace WebApplication
     public partial class Default : System.Web.UI.Page
     {
         GeneralBusinessRepo BusinessObject = new GeneralBusinessRepo();
+        float PolyCount = 0;
+        float OptPolyCount = 0;
+        float OptPercentage = 0;
 
+        string TempResults = "";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -34,27 +38,52 @@ namespace WebApplication
                     Session["FileName"] = FileUploadControl.FileName;
                     string filename = Path.GetFileName(FileUploadControl.FileName);
                     FileUploadControl.SaveAs(Server.MapPath("~/Resources/Import/") + filename);
-                    labUploadStatus.Text = "Upload status: File uploaded!";
+
+                    //Decimate Mesh
+                    funcDecimateMesh();
+
+                    //Display Decimation information to client
+                    UpdateClientInformation();
+
+
+                    //Update AssetBundle
+                    funcGenerateAssetBundle();
                 }
                 catch (Exception ex)
                 {
-                    labUploadStatus.Text = "Upload status: The file could not be uploaded. The following error occured: " + ex.Message;
                 }
             }
         }
 
-        protected void btnDecimateMesh_Click(object sender, EventArgs e)
+        private void UpdateClientInformation()
         {
-            if (Session["FileName"] != null)
-                if (!string.IsNullOrEmpty(Session["FileName"].ToString()))
-                    txtResults.Text = BusinessObject.DecimateMesh(Session["FileName"].ToString());
+            int a = TempResults.IndexOf("]}") - TempResults.IndexOf("{[");
+            TempResults = TempResults.Substring(TempResults.IndexOf("{[") + 2, TempResults.IndexOf("]}") - TempResults.IndexOf("{[") -2);
+            string[] ParamsDecimation = TempResults.Split(',');
+
+            float.TryParse(ParamsDecimation[0], out PolyCount);
+            float.TryParse(ParamsDecimation[1], out OptPolyCount);
+            float.TryParse(ParamsDecimation[2], out OptPercentage);
+
+            labPolyCount.Text = PolyCount.ToString();
+            labOptPolyCount.Text = OptPolyCount.ToString();
+            labOptPercentage.Text = OptPercentage.ToString() + "%";
         }
 
-        protected void btnGenerateAssetBundel_Click(object sender, EventArgs e)
+
+
+        private void funcGenerateAssetBundle()
         {
             if (Session["FileName"] != null)
                 if (!string.IsNullOrEmpty(Session["FileName"].ToString()))
-                    txtResults.Text = BusinessObject.GenerateAssetBundel(Session["FileName"].ToString());
+                    TempResults = BusinessObject.GenerateAssetBundel(Session["FileName"].ToString());
+        }
+
+        private void funcDecimateMesh()
+        {
+            if (Session["FileName"] != null)
+                if (!string.IsNullOrEmpty(Session["FileName"].ToString()))
+                    TempResults = BusinessObject.DecimateMesh(Session["FileName"].ToString());
         }
     }
 }

@@ -24,7 +24,7 @@ namespace BusinessLayer
             string DecimationScriptPath = BaseApplicationPath + @"Resources\Decmiate.py";
             string ImportObjectPath = BaseApplicationPath + @"Resources\Import\" + FileName;
             string ExportObjectPath = BaseApplicationPath + @"Resources\Export\" + FileName;
-            string DecimationCommand = "blender " + InitalBlenderProjectPath + " --background --python " + DecimationScriptPath + " -- " + ExportObjectPath + " " + ImportObjectPath + " 0.5";
+            string DecimationCommand = "blender " + InitalBlenderProjectPath + " --background --python " + DecimationScriptPath + " -- " + ExportObjectPath + " " + ImportObjectPath + " 0.1";
             return DataAccessObject.ExecuteShellCommand(DecimationCommand);
         }
 
@@ -41,7 +41,7 @@ namespace BusinessLayer
 
 
             //Build Asset Bundle Command
-            string BuildAssetBundle = @"unity -batchmode -projectPath " + "\"" + BaseApplicationPath + @"Resources\Architecture Showcase - Asset Builder" + "\"";
+            string BuildAssetBundle = @"unity -quit -batchmode -projectPath " + "\"" + BaseApplicationPath + @"Resources\Architecture Showcase - Asset Builder" + "\" -executeMethod AutomationInit.BuildClientAssets";
 
             return DataAccessObject.ExecuteShellCommand(CopyObjCommand) + Environment.NewLine + DataAccessObject.ExecuteShellCommand(CopyMtlCommand) + Environment.NewLine + DataAccessObject.ExecuteShellCommand(BuildAssetBundle);
         }

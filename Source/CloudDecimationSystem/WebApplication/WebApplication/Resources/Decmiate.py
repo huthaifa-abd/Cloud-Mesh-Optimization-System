@@ -15,6 +15,9 @@ obj_in = argv[1]
 #Set the amount of decimation required
 decimation_ratio = argv[2]
 
+#Variable to hold scene polycount
+sceneOriginalPolyCount = 0
+sceneOptimizedPolyCount = 0
 #Import The Selected Object
 bpy.ops.import_scene.obj(filepath=obj_in)
 
@@ -24,6 +27,8 @@ for ob in bpy.context.visible_objects:
 	if ob.type == 'MESH':
 		#Set object as active in the scene
 		bpy.context.scene.objects.active = ob
+		#Get Original polycount
+		sceneOriginalPolyCount += len(bpy.context.scene.objects.active.data.polygons)
 		#Apply Decimation Modifier to the selected object
 		bpy.ops.object.modifier_add(type="DECIMATE")
 
@@ -33,8 +38,15 @@ for ob in bpy.context.visible_objects:
 		#Apply Decimation Modifire To Mesh
 		bpy.ops.object.modifier_apply(apply_as='DATA', modifier="Decimate")
 		
+		sceneOptimizedPolyCount += len(bpy.context.scene.objects.active.data.polygons)
 
+#Calculate Orignal Poly Count
+print("{[" + str(sceneOriginalPolyCount)+"," 
+	#Calculate Optimized Poly Count
+	+ str(sceneOptimizedPolyCount)+"," 
+	#Calculate Optimization Percentage
+	+ str(int(100 - ((sceneOptimizedPolyCount/sceneOriginalPolyCount)* 100))) + "]}")
+	
 #Export Scene Objects to a seprate file
 bpy.ops.export_scene.obj(filepath=obj_out, axis_forward='-Z', axis_up='Y')
-
 ##For future refrences ADD Decimation Preview Code Below
