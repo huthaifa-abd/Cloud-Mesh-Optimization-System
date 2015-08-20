@@ -46,22 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\OBJ-IO\Examples\Scripts\Example.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Extension\GameObjectExtension.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Extension\MeshExtension.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Extension\StringExtensions.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Extension\Texture2DExtension.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Extension\TransformExtension.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Extension\UnityExtension.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Extension\VectorExtension.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Mesh\OBJ\OBJData.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Mesh\OBJ\OBJFace.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Mesh\OBJ\OBJFaceVertex.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Mesh\OBJ\OBJGroup.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Mesh\OBJ\OBJLoader.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Mesh\OBJ\OBJMaterial.cs" />
-     <Compile Include="Assets\OBJ-IO\Plugins\Utils\Int32Converter.cs" />
-     <None Include="Assets\OBJ-IO\Readme.txt" />
+     <Compile Include="Assets\Scripts\AssetManagerClass.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

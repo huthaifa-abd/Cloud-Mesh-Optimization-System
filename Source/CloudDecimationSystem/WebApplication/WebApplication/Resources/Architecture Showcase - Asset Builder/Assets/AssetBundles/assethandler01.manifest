@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 1907775660
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1692ef3a704e27cf5858cc1ed5cbd335
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e9458299030eefcc562450f92d52d33a
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/TempModels/AssetHandler.obj
+Dependencies: []

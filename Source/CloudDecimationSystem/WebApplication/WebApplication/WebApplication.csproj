@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62BDF2F1-AC4C-4A26-9776-7E6CD4B9FAB1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication</RootNamespace>
+    <AssemblyName>WebApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Architecture Showcase - Asset Builder.userprefs" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\AssetBundles\AssetBundles" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\AssetBundles\AssetBundles.manifest" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\AssetBundles\assethandler01" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\AssetBundles\assethandler01.manifest" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\Scene\Main.unity" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\TempModels\AssetHandler.mtl" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\TempModels\AssetHandler.obj" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\TempModels\Materials\defaultMat.mat" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\TempModels\Materials\None.mat" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\TempModels\Temp\Cube.mtl" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\TempModels\Temp\Cube.obj" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\TempModels\Temp\Monkey.mtl" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\TempModels\Temp\Monkey.obj" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\TempModels\Temp\Sphere.mtl" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assets\TempModels\Temp\Sphere.obj" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\AnnotationManager" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\assetDatabase3" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\AssetImportState" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\AssetServerCacheV3" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\AssetVersioning.db" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\BuildPlayer.prefs" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\BuildSettings.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\CurrentLayout.dwlt" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\EditorUserBuildSettings.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\EditorUserSettings.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\expandedItems" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\InspectorExpandedItems.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000001000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000001000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000002000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000002000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000003000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000003000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000004000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000004000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000004100000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000004100000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000005000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000005000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000005100000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000005100000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000006000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000006000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000006100000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000006100000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000007000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000007000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000008000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000008000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000009000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\00000000000000009000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\0000000000000000a000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\0000000000000000a000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\0000000000000000b000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\0000000000000000b000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\0000000000000000c000000000000000" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\00\0000000000000000c000000000000000.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\01\01d05355e0d53c54684ae77c6cb70ea8" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\01\01d05355e0d53c54684ae77c6cb70ea8.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\03\03ca8b32a3b270546b4fce156d5f1c44" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\03\03ca8b32a3b270546b4fce156d5f1c44.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\07\07e0680444c7d75469ac1dc57ef15d79" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\07\07e0680444c7d75469ac1dc57ef15d79.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\15\15cc74a19f2bddf48bf374fbb0ec1720" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\15\15cc74a19f2bddf48bf374fbb0ec1720.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\21\21341f69f6ab01d4c99c99b65453b459" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\21\21341f69f6ab01d4c99c99b65453b459.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\25\2586e05eda9ddad42b8505dabbd0a207" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\25\2586e05eda9ddad42b8505dabbd0a207.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\26\26c9f08e9980bf54e9bcca6eace7babf" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\26\26c9f08e9980bf54e9bcca6eace7babf.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\4d\4d824f4d6ce1e224384728ae4be6f794" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\4d\4d824f4d6ce1e224384728ae4be6f794.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\4f\4f6e2964089b4b441b617f83eae86d7f" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\4f\4f6e2964089b4b441b617f83eae86d7f.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\5f\5f32cd94baa94578a686d4b9d6b660f7" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\5f\5f32cd94baa94578a686d4b9d6b660f7.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\67\678a6c564c740f049bba3c76448cd42e" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\67\678a6c564c740f049bba3c76448cd42e.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\7c\7c4d15241c001fa4d9f55e8132c9c5cd" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\7c\7c4d15241c001fa4d9f55e8132c9c5cd.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\80\80a3616ca19596e4da0f10f14d241e9f" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\80\80a3616ca19596e4da0f10f14d241e9f.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\87\870353891bb340e2b2a9c8707e7419ba" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\87\870353891bb340e2b2a9c8707e7419ba.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\97\97ce56aae25dff54daa6cf121f21d4b6" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\97\97ce56aae25dff54daa6cf121f21d4b6.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a4\a44b5912890cdaf4da5c1084fea2a333" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a4\a44b5912890cdaf4da5c1084fea2a333.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a8\a878ce9f7665bba44a071de7b5157dab" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a8\a878ce9f7665bba44a071de7b5157dab.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b1\b13650466df784941aefa48bae18387d" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b1\b13650466df784941aefa48bae18387d.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b3\b3ce139fc7154d245900bb7d3d5479d1" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b3\b3ce139fc7154d245900bb7d3d5479d1.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b9\b9f8e2fece195bc428d1f339194aa5a9" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b9\b9f8e2fece195bc428d1f339194aa5a9.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\be\bef66253625a1a542a7efab49975fbe1" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\be\bef66253625a1a542a7efab49975fbe1.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\d8\d8223b8b6947a8b43bf113c92e64dc4a" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\d8\d8223b8b6947a8b43bf113c92e64dc4a.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\df\df4b00e1cf60a0f41a971e81d4860983" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\df\df4b00e1cf60a0f41a971e81d4860983.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f5\f5f67c52d1564df4a8936ccd202a3bd8" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f5\f5f67c52d1564df4a8936ccd202a3bd8.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f6\f692dcc97c7fc654f90f23183f5e0c5d" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f6\f692dcc97c7fc654f90f23183f5e0c5d.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\fa\fa0974e0278bf04429694c887085b56c" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\fa\fa0974e0278bf04429694c887085b56c.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\fe\feafc57cacd3d714bae3dd9c840ea491" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\fe\feafc57cacd3d714bae3dd9c840ea491.info" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\MonoManager.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ProjectSettings.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ScriptAssemblies\BuiltinAssemblies.stamp" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ScriptMapper" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache.db" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\0292b9c1fc6edbf3413b9ed06e7c12cb.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\02fe8e3e25187433a348ac97bcc1c455.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\04573324c67c8e58eb662476ebb7409e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\046bddb2e0188fdcacea717395df48e7.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\0490555c9e5b7b7bfb8c8c77d86eecc4.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\06e9186fd9192283964d716a09857d36.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\07f96c7b81d87a38bd30051b3d67404c.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\080e7a185b4987d838745bc33637c3aa.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\08292fbff3115ba2a129a3a68e2e9c47.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\099a7f1d2c9d58e1c06da39556eed53e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\0a3e0a376a7708914e3de37a8ce04a9a.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\0bc2128dac1c90613adc5640a3e6057e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\0c2b95eadd77ed0f117832c826eca060.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\0c625464bb0d028baba6bab30757bddb.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\0de8f30f2ab7a4ca6345aeb4c0634070.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\0ebb2a6b81bd37f5471b4f07b36d84f9.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\0ec5ff681931e47c94d599cd32500bfd.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\0f98a82a656d2c747e0776cfc3de7804.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\0\0fd48d24120399ae26dcac073bff5314.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\101216eae8522ea56c874c41601d3f3e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\104150239574dd57853a82a486fe9ebe.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\108f09f96bd559651b024b03a2849bda.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\10bc013a3b9272f7a23a0acadd120b18.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\10d1c85b41201e0747743ded0a8fabb7.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\10e305c981b4af78df9a7ec0a6e72146.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\118a0bdb6b220f425dbff1c516c4db61.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\12660bf1751fa91e1e39226b8b1778ae.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\1329bd5d272666ddfe473d6dff7b3748.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\14b266f31c07302ffda077f3bf5ed920.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\151c4ba8df7ce7cf6b3464744cc66b9d.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\1535555796b695a677d507ec9f3bde66.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\15aa991721ed0bcc8fcf7663f6dd49ae.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\1662e8be08bbd5e3c6171a6461567a22.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\171745ff176536879883cc5f027c8221.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\17d76ad86e00b5dbd4c3be7a81801f11.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\18d0167c0d39afa7b7a0d07f9a831178.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\1930cde678acc061694a66be3dfe9c00.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\19a7e37f8c2844f0b3c683113f8f7810.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\1\1dd4ec66f1e55ab0048556e5e877af73.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\20e6cf14dcbeb04215f667c9d88a5ff9.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\2132f4d11db1e3d8fecdfd767d089282.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\243d4f185b594c2f5a5ade178fecd48c.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\26bfc84f02156b5812e8c711694b708f.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\27497861748c4cfad7f4e62c47d65e11.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\2851cae1e608ccbc2c98437a604c43c4.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\29ab1b6ec5b7efb4d2db0fc505c32018.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\2aa055bd24f7e38999a9444d3e874f51.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\2aded4da9a8fabe91b95e49c5772b7e6.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\2b2d380eaba7ef2e7eae542a713a358b.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\2dc864f3e6a7852376c4da1653c9562f.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\2e32eaf05f250846479c1fc0f602b883.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\2f0a52a429f068b4eaa331171d8aa389.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\2\2fab48f88c189b661bd856c0f9798715.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\3046bfc2c670beac1f4fb1449c010d5f.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\306752c5e639fdf58e48d2e5483cb6d6.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\30bd317ed5d90b0c0aba682a597e59e5.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\316e2de2636d748c527013d5598532be.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\338e08285fc558cefb17c2098e6d4c93.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\3503eec2176ef4ee1f451ed691de1042.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\351588053c4bea2380097a12d07ca025.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\359c98dd7ac87156dc8eae7257b1eba2.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\36522ddba6540f2e9864be40d1e24c68.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\36b66b60a38a92b80cdc433a87de7c29.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\36fff60b9b38127faa56cdce77d7cf79.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\37c844ea4f6016c8dbc9c8ec08053cf2.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\39880c29e0786fc194dd06f72f2bf4b3.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\3ad83a79cdd0089088d00c0d0e7cf4a4.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\3daf89dacb66a43f75024249f07dc7da.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\3dc55dd28a5005a3b5e2248dffb15240.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\3\3eb8274a0bdf916d5d1c08a2688a88a5.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\4125053361760103ba79f6f4da9911d6.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\4172e6951cd11da4ad38a8275b829977.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\4334f97bc4e8eeaed4b0317123138951.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\4408b2c3c7a6f0ba37d73a70ab1808db.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\44a5aca40f918766ccc90bba05c5fbef.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\44b294e4beaf1bfc850e8d78a7c17afd.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\44b40d819a3c401322d916a889951812.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\44b9cbe1d720a7d9aa34b8e50ce27f28.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\45adca93bd8080399aa9ae524a6d3780.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\4801e42dc154b9f3621a8eba844c1285.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\4a03ad0f9162af5250a14998d9e15caf.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\4\4bab7c5fbb74e96f03d9b41359548835.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\52abbeea2c7af69b055d3d833d810eb6.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\5318fda380f4ca9d5741b90d1b1ab53b.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\5375e9675aaecc1feb6de727354d0575.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\5391087ec554f1a41f96e5249f2fdae9.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\54212ab2ae38ae7ff73fae58225f0d28.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\54c131a8b02ea60b4ad81e63181d8730.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\54d05c6642c661628da095c084d8dec7.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\54e21f482bc17bcf1f97cc5070226c17.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\5508c3b9103a13959ccf9d5a5b87cd4b.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\587d3533c1e9f3964a68d9e5a73f086b.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\58ce7a4424b6df3fb3c939db87b0091f.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\59047af909d7ae5f4f28676b068e648e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\5a3b0ac481c5804bc3a2f08b4413c6c6.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\5c01dcf2bddeac8838cfa5bb99db04f0.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\5cde38ef0ee659418e84474db0ea9e26.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\5cefc479fcb6fb8b6c1df6c786ac130e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\5\5dcb8752758b62267a5f32d28086173c.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\627ae0e2ad68e36b853b120e1b4b1edd.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\6359b02e3676ae3d67b73f4e2c19838c.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\640dbc28bd310a459d95ddd5281bf8b6.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\64d82f483e47c3c39b6ba35161763169.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\67194a6d7e9147597e177435000a0b49.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\673c329ca76f508db90e1b44c5fdb587.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\690c29dd99730089a6be988b56c293f2.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\698685d9860fe5ef1ad7616b6d1fab15.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\6b26ea2172c657da18c7f9547d16186f.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\6e9d3e882e9f2162526b53b86b8acb5b.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\6f368d723e7079b2cc7cdc72a71cca06.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\6\6f9273fff9521dbcef13787fb628c2c1.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\71369c7258f715c3b23ca93028a292dd.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\71393733f792a3d50c8ba840674efb52.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\7343ef174c2761960c3457418a943d13.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\744cc66b4ce92a0e1bd5a40b8e14af76.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\74b9e247d6c87b3926af94ef5aed4a94.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\76009c9915834daa76aebe1d92a19654.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\76f21d0215041d44c8ccfb037c64fbf5.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\772bafe0faa08097df1b41957c280546.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\77785de222d2f2680b49b1b420a5e8c6.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\796210095ac36d30aeeb1b2953470d93.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\79f5e867367aa071d881e72c0fa3789f.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\7a01f6a6eae2b42b962dd062f4719ba4.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\7a19af7f5e0b81798351395452a44894.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\7c56ce1eb9a5a7ee5c453e1df6259103.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\7d2187131c668170ad9fdaf7d2fc505d.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\7e45b0cf87ba7143df3c6c6980bf12e2.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\7eeee9e5eff246a81cdf6f63b2b2fc57.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\7\7ef19720a00cd41527a63749494231a3.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\8023792d5ae18efad51ac96bcf7c54b4.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\80fbefb460d1fd58a60f390158b28b66.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\830a8776f01428620c284d3f0e773e43.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\8388c6c9f9a38fa7c42c38190690b2b4.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\83cd5799efc722e8829db00c1f09e12a.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\83cf24ccfdc44f2d37058af4c2b524ea.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\83dae819139ea301efcee4086460719e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\84b8fc3435091a54486ca8ab4aa2e37b.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\85fc47c57f54ec66b4b2d4fbab05d40e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\86397a3d5e8e5612653cbad6ced1db61.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\8739160b47e28e0c7144e9fdc4d37773.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\87666ec3204aac9c911a9fa5c793a839.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\878b59a4fb23d36fd6494d97277f231a.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\8801280e532b24c387f4bed562098587.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\8a46a4ecb974722697812f3340e7edd6.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\8d7477648c75557ee9816c1296940656.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\8d7eca10e51ae6a5b18893437b74dafc.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\8ddabc000ac2211bdee42ee041b58f2b.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\8\8f73fa077c2ed0735f49c333b33100e9.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\905751c9229260c64c68589550e56ba4.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\90613dc2196c59dc3b026e9b0b9a8a01.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\90a70007878b45ad3486b4231364f3e7.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\9162873d969c4a675930c9846177508e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\918ef63f83e9a15f3a954b83e2642779.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\92f06f63e56e3b63ae6233131fb4afda.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\93559e0643699449ea34dfc7cd8ec361.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\93f7270530c1abe4e44703628eaba3ae.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\94af37c31bde79927344a74e27ef0435.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\956f9ae15ce4572306ef3cb495e2553a.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\98075a315bd578e4f1d5ff9ba5affa4d.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\98116b55af13fba3199de29131fd6329.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\98b803a58974d7907a599ab131873f8e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\9a094a1c458a015070d0c77365c1b431.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\9bd193d32345d43abdd4e77925842cc7.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\9be7b3adfde00ea37031e928075f1270.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\9d27ef3bc3f229d22fb55de4cc737e0a.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\9\9dcc2c3e64472e410e029fcdcb0ac447.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\a\a0e1f8a8a2009507df98456e627baa4c.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\a\a15fedb678a4ccecde7cc20da93069a2.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\a\a7b7a3d7ff9ee488e819171aa6421449.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\a\a8840d8f8eb263fdf13e96047c3f1eb4.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\a\a93f13321c0e4787798bb79e1a7a98dc.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\a\aaf2b886c23511a455f73de47b74bcb6.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\a\ac31e32a8e79389e9dd93b4996d85a41.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\a\acb65f530ca90022f24a588a033744a7.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\a\af1093638dc497b008c47a0663b037c5.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\b083a0e7d6df79d876d014114b59b748.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\b130f7ead03eeefbc289124cdd2302ea.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\b26f6844c696258c40eea5272f5d61fb.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\b2e70fe904ddbdd63b3ea4247f3f9141.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\b4177646a163c0df95dbc0b0db143680.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\b55506af8cbb546c06f5315e349b6775.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\b5853afb1a474072174fe2574b41556b.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\b7c0554c40a11e2d176b9df5cd540d49.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\b8223c55360368f97d99f16dbeb12ebb.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\bb07d7f86a07648bb0dfbf72eefd5736.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\bbbff491fe1e2f338433147e501e0209.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\bc8ba6f2e2679e4a0882765146e86332.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\b\bd5a98804a3aaef8a1af90f8ed0f3720.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\c\c22c41a601f64f4df3765ea7668ef857.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\c\c48c1417e77b0b6b30e0d5fc7633fadc.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\c\c631cceb0f842477cb24ff373cc99455.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\c\c7299a6a39620b19ecd4352cbc0af938.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\c\c7922d9a034b0b27ed2b23a8ffd90ca4.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\c\c86fd981956da3e94f7c10133f908bd9.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\c\ca774535342adee3fb0074b4a54d751d.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\c\cbc0d5d1f51c57e195700fd0a7f47b58.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\c\cbc943e890977aa98e83d8b90c2d9b27.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\c\cfebe3f6c8ad70ac79576fbe6e5e0fe0.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\d19b497adfbb33350ab141008947f859.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\d2d67dbbbe053aa409103845fabcb0bd.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\d43a8621326e620163f5d4c0ac5bc3af.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\d4f997c053812a41d3c2df116876c9b3.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\d59fe4cca395624ea31abad584eefd83.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\d85566d72b6a20aa5fa6b3b7788a4608.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\d8853645c8c8cd311ce9b28b136f4c37.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\dabebd9c0df5b078fea09820b257f9a6.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\dc0fdd756e5127bc81591c90326fe439.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\dcca8507813a1fea8e9871510e3630b1.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\dd1dc9c7ab9adba193361c8a3b57b2c1.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\dd5bc5fc6897e7f5a632abb066013c30.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\d\de1e955654452082c4f7c88aa24da2d9.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\e23957c55d411ed246a1b9cc9e050807.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\e481a53809af06e39c49acb0362dfd6e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\e5ef1a352bd9935bbfcabb973ad7f6e8.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\e5fe2b8e52f62b887b3318db6a110aa1.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\e6991f0b8248da95bcc6829fd3f715c5.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\e74f473c5fd9c98152aa664634af5a4d.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\e8106fbec6508462c09ded87f6b3050a.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\e99d19b248fa6749fc1ea779217580da.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\eacb8b8a47715ff9d0e02b3e890f0849.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\eafcde17bece589bf615dbb37b24a488.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\eb62e9dc95ae6bb5081c8636890b1916.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\ec01ab9632097c215152c9daba55037d.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\ec1ab85aa384bc3f819170aea902829c.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\ec92e196767257456b29589e0a76d5ae.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\ed49f668c0a410f98b156c2c73044ba3.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\ed8fff60616aabe532c78348753f4d59.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\e\edcfb9bd791069d0c5d09b842d2b5353.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\f0a79c88df46253044ca5fa71fd90452.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\f14425ddeede1798532c62f09672cb1c.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\f1d8c2ac308f27f1b004b16e2a28f36b.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\f21e3c8c0e2f4c8580550279bfb8ad7e.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\f32d0439d0f5f1295df18b7a51c79d3c.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\f6d7c87b719ca5107b597a216caf4115.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\f9384268024c255535ccb48ffae7cae8.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\fb765028b36e67a37fc9407b524aef0c.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\fb876b4bba575b1ecd18c7acb657b304.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\fb8d442d9d6ee20221f628f7329b1509.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\fd2806c3a1929a2f928a454e3b7fb236.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\fd571149ae32865182cc23c6d05c9828.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\fd67b6afadbfa0a0632ff28cdf2da490.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\fe08116c20b9f16ea29a0aba6db64c6d.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ShaderCache\f\ff473c25a80a8c18ebc0abb98304320b.bin" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\shadercompiler-32bit-1.log" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\shadercompiler-32bit-2.log" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\shadercompiler-32bit-3.log" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\shadercompiler-32bit-4.log" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\shadercompiler-64bit-1.log" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\shadercompiler-64bit-2.log" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\shadercompiler-64bit-3.log" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\shadercompiler-64bit-4.log" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\AudioManager.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\DynamicsManager.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\EditorBuildSettings.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\EditorSettings.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\GraphicsSettings.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\InputManager.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\NavMeshAreas.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\NetworkManager.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\Physics2DSettings.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\ProjectSettings.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\QualitySettings.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\TagManager.asset" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\TimeManager.asset" />
+    <Content Include="Resources\Archives\app-plus-app-landing-page.zip" />
+    <Content Include="Resources\Decmiate.py" />
+    <Content Include="Resources\Empty.blend" />
+    <Content Include="Resources\Export\TestDicimate.mtl" />
+    <Content Include="Resources\Export\TestDicimate.obj" />
+    <Content Include="Resources\Import\edificio_blendswap.mtl" />
+    <Content Include="Resources\Import\edificio_blendswap.obj" />
+    <Content Include="Resources\Import\MonkeyObject.mtl" />
+    <Content Include="Resources\Import\MonkeyObject.obj" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Architecture Showcase - Asset Builder-csharp.sln" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Architecture Showcase - Asset Builder.sln" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assembly-CSharp-vs.csproj" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Assembly-CSharp.csproj" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\LibraryFormatVersion.txt" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ScriptAssemblies\Assembly-CSharp.dll" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb" />
+    <Content Include="Resources\Architecture Showcase - Asset Builder\ProjectSettings\ProjectVersion.txt" />
+    <Content Include="Resources\css\styles.css" />
+    <Content Include="Resources\index.html" />
+    <Content Include="Resources\js\scripts.js" />
+    <Content Include="Resources\Readme.txt" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Assets\Scripts\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Assets\Temp\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\02\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\04\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\05\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\06\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\08\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\09\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\0a\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\0b\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\0c\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\0d\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\0e\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\0f\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\10\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\11\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\12\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\13\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\14\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\16\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\17\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\18\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\19\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\1a\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\1b\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\1c\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\1d\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\1e\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\1f\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\20\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\22\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\23\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\24\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\27\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\28\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\29\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\2a\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\2b\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\2c\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\2d\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\2e\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\2f\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\30\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\31\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\32\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\33\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\34\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\35\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\36\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\37\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\38\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\39\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\3a\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\3b\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\3c\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\3d\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\3e\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\3f\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\40\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\41\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\42\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\43\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\44\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\45\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\46\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\47\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\48\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\49\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\4a\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\4b\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\4c\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\4e\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\50\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\51\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\52\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\53\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\54\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\55\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\56\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\57\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\58\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\59\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\5a\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\5b\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\5c\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\5d\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\5e\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\60\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\61\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\62\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\63\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\64\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\65\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\66\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\68\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\69\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\6a\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\6b\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\6c\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\6d\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\6e\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\6f\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\70\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\71\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\72\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\73\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\74\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\75\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\76\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\77\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\78\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\79\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\7a\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\7b\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\7d\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\7e\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\7f\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\81\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\82\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\83\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\84\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\85\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\86\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\88\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\89\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\8a\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\8b\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\8c\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\8d\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\8e\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\8f\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\90\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\91\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\92\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\93\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\94\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\95\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\96\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\98\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\99\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\9a\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\9b\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\9c\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\9d\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\9e\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\9f\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a0\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a1\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a2\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a3\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a5\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a6\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a7\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\a9\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\aa\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ab\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ac\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ad\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ae\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\af\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b0\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b2\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b4\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b5\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b6\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b7\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\b8\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ba\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\bb\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\bc\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\bd\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\bf\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\c0\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\c1\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\c2\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\c3\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\c4\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\c5\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\c6\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\c7\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\c8\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\c9\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ca\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\cb\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\cc\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\cd\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ce\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\cf\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\d0\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\d1\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\d2\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\d3\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\d4\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\d5\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\d6\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\d7\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\d9\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\da\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\db\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\dc\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\dd\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\de\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\e0\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\e1\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\e2\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\e3\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\e4\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\e5\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\e6\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\e7\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\e8\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\e9\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ea\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\eb\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ec\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ed\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ee\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ef\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f0\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f1\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f2\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f3\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f4\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f7\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f8\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\f9\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\fb\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\fc\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\fd\" />
+    <Folder Include="Resources\Architecture Showcase - Asset Builder\Library\metadata\ff\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{fcd399f2-da6b-4078-9d98-c7866cc67864}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50032</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50032/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
