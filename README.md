@@ -1,5 +1,6 @@
 # Cloud Decimation / Mesh Optimization System
 ![ScreenShot](http://i1.wp.com/blog.huthaifa-abd.com/wp-content/uploads/2015/08/Alpha-Lab-Cloud-Decimation-Optimization-System-01.png?resize=648%2C318)
+
 An Enterprise solution to optimize complex architecture models for use on desktop and mobile devices , the system aims to provide multiple level of resolution / Quality , and aims to support all types of meshes , also it has a full support for unity engine
 
 The main reason of the development of the system is to provide an easy to use solution for architect designers allowing them to distribute their models of a large range of devices and services , by handling complex mesh optimization 
