@@ -1,8 +1,0 @@
-C:\Cache\Zeuss-Decimation\Source\CloudDecimationSystem\WebApplication\DataAccessLayer\bin\Debug\DataAccessLayer.dll
-C:\Cache\Zeuss-Decimation\Source\CloudDecimationSystem\WebApplication\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
-C:\Cache\Zeuss-Decimation\Source\CloudDecimationSystem\WebApplication\DataAccessLayer\obj\Debug\DataAccessLayer.dll
-C:\Cache\Zeuss-Decimation\Source\CloudDecimationSystem\WebApplication\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-G:\GameDevelopment\Projects\Cloud-Mesh-Optimization-System\Source\CloudDecimationSystem\WebApplication\DataAccessLayer\bin\Debug\DataAccessLayer.dll
-G:\GameDevelopment\Projects\Cloud-Mesh-Optimization-System\Source\CloudDecimationSystem\WebApplication\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
-G:\GameDevelopment\Projects\Cloud-Mesh-Optimization-System\Source\CloudDecimationSystem\WebApplication\DataAccessLayer\obj\Debug\DataAccessLayer.dll
-G:\GameDevelopment\Projects\Cloud-Mesh-Optimization-System\Source\CloudDecimationSystem\WebApplication\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
