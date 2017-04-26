@@ -51,6 +51,7 @@ namespace WebApplication
                 }
                 catch (Exception ex)
                 {
+                    labResultNotification.Text = "We apologize for the inconvenience it seems either the file is Corrupted or unsupported file format.";
                 }
             }
         }
