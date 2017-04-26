@@ -1,7 +1,0 @@
-C:\Cache\Zeuss-Decimation\Source\CloudDecimationSystem\WebApplication\BusinessLayer\bin\Debug\BusinessLayer.dll
-C:\Cache\Zeuss-Decimation\Source\CloudDecimationSystem\WebApplication\BusinessLayer\bin\Debug\BusinessLayer.pdb
-C:\Cache\Zeuss-Decimation\Source\CloudDecimationSystem\WebApplication\BusinessLayer\bin\Debug\DataAccessLayer.dll
-C:\Cache\Zeuss-Decimation\Source\CloudDecimationSystem\WebApplication\BusinessLayer\bin\Debug\DataAccessLayer.pdb
-C:\Cache\Zeuss-Decimation\Source\CloudDecimationSystem\WebApplication\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
-C:\Cache\Zeuss-Decimation\Source\CloudDecimationSystem\WebApplication\BusinessLayer\obj\Debug\BusinessLayer.dll
-C:\Cache\Zeuss-Decimation\Source\CloudDecimationSystem\WebApplication\BusinessLayer\obj\Debug\BusinessLayer.pdb

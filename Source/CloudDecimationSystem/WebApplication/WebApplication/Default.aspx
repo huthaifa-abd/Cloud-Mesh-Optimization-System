@@ -158,7 +158,7 @@
 
                         <p>Optimized Polycount :<span><asp:Label ID="labOptPolyCount" runat="server" Text="0"></asp:Label></span></p>
 
-                        <p>You may now view this mesh using the Unity client . </p>
+                        <p><asp:Label id="labResultNotification" runat="server" Text="You may now view this mesh using the Unity client ."></asp:Label></p>
                         <div class="block">
                             <ul class="download-btn">
                                 <li>

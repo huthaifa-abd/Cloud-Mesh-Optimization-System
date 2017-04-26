@@ -52,6 +52,7 @@ namespace DataAccessLayer
             sIn.WriteLine(String.Format(stEchoFmt, strFilePath));
             sIn.WriteLine("EXIT");
 
+            proc.WaitForExit();
             // Close the process
             proc.Close();
 
